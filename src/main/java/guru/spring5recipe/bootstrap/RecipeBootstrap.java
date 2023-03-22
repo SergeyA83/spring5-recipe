@@ -42,7 +42,7 @@ public class RecipeBootstrap implements CommandLineRunner {
                                      "\n" +
                                     "Whoever invented the dish is brilliant. You get crunch, heat, salt, sweet, smoke, and aromatics all at once. All the ingredients are added to the pan in stages, and from start to finish, it takes just over ten minutes.");
         noodlesRecipe.setPrepTime(10);
-        noodlesRecipe.setCategories(Set.of(categoryRepository.findByDescription("Asian").orElseThrow(() -> new Exception("Not found category"))));
+        noodlesRecipe.getCategories().add(categoryRepository.findByDescription("Asian").orElseThrow(() -> new Exception("Not found category")));
         noodlesRecipe.setCookTime(30);
         noodlesRecipe.setDifficulty(Difficulty.EASY);
         noodlesRecipe.setDirections("Make the sauce:\n" +

@@ -1,8 +1,11 @@
 package guru.spring5recipe.domain;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Data
 @Entity
 public class Ingredient {
     @Id
@@ -22,35 +25,4 @@ public class Ingredient {
         this.unitOfMeasure = unitOfMeasure;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public Recipe getRecipe() {
-        return recipe;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public void setRecipe(Recipe recipe) {
-        this.recipe = recipe;
-    }
 }

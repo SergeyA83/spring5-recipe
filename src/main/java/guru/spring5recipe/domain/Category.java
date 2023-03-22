@@ -1,12 +1,12 @@
 package guru.spring5recipe.domain;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.util.Set;
 
 @Data
 @Entity
+@EqualsAndHashCode(exclude = {"recipes"})
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +17,6 @@ public class Category {
     @ManyToMany(mappedBy = "categories")
     private Set<Recipe> recipes;
 
+    public Category() {
+    }
 }
