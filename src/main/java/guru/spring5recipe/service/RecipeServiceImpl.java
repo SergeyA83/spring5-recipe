@@ -1,4 +1,4 @@
-package guru.spring5recipe.Service;
+package guru.spring5recipe.service;
 
 import guru.spring5recipe.domain.Recipe;
 import guru.spring5recipe.repositories.RecipeRepository;
